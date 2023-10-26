@@ -1,11 +1,11 @@
 import AppRouter from './AppRouter';
 
-function App() {
+const App = () => {
   return (
     <div className='App'>
       <AppRouter />
     </div>
   );
-}
+};
 
 export default App;
