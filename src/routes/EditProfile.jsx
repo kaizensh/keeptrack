@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../db/supabaseClient';
+import { supabase } from '../supabaseClient';
 
 import { useAuth } from '../utils/context/AuthProvider';
 
-const Account = () => {
+const EditProfile = () => {
   const [loading, setLoading] = useState(true);
   const [username, setUsername] = useState(null);
   const [website, setWebsite] = useState(null);
@@ -114,4 +114,4 @@ const Account = () => {
   );
 };
 
-export default Account;
+export default EditProfile;

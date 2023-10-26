@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useState } from 'react';
-import { supabase } from '../../db/supabaseClient';
+import { supabase } from '../../supabaseClient';
 
 const AuthContext = createContext({});
 
@@ -33,7 +33,9 @@ const AuthProvider = ({ children }) => {
       setAuth(currentUser ? true : false);
       setLoading(false);
     };
+
     getUser();
+
     const { data } = supabase.auth.onAuthStateChange(async (event, session) => {
       if (event == 'PASSWORD_RECOVERY') {
         setAuth(false);

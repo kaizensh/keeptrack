@@ -7,7 +7,7 @@ import PasswordReset from './routes/PasswordReset';
 import UpdatePassword from './routes/UpdatePassword';
 import AuthRoute from './routes/AuthRoute';
 import Home from './routes/Home';
-import Account from './routes/Account';
+import EditProfile from './routes/EditProfile';
 import Dashboard from './routes/Dashboard';
 
 const AppRouter = () => {
@@ -27,8 +27,8 @@ const AppRouter = () => {
                 element={<Home />}
               />
               <Route
-                path='/account'
-                element={<Account />}
+                path='/edit-profile'
+                element={<EditProfile />}
               />
               <Route
                 path='/dashboard'
@@ -46,7 +46,7 @@ const AppRouter = () => {
               element={<Login />}
             />
             <Route
-              path='/passwordreset'
+              path='/reset-password'
               element={<PasswordReset />}
             />
             <Route
